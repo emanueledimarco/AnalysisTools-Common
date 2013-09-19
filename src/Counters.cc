@@ -7,6 +7,8 @@
 #include <TString.h>
 #include <TTree.h>
 
+using namespace vecbos;
+
 void Counters::AddVar(string name) {
   _names.push_back(name); 
   _counts.push_back(int(0));
@@ -101,3 +103,4 @@ void Counters::Save(const char* filename, const char* option) {
   file->Close();
 
 }
+

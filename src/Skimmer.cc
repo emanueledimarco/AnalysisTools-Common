@@ -3,6 +3,8 @@
 
 #include "AnalysisTools/Common/interface/Skimmer.hh"
 
+using namespace vecbos;
+
 Skimmer::Skimmer(const char *skimTxtFile) {
   m_file = skimTxtFile;
 }

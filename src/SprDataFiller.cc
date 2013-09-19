@@ -2,6 +2,8 @@
 
 #include "AnalysisTools/Common/interface/SprDataFiller.hh"
 
+using namespace vecbos;
+
 SprDataFiller::SprDataFiller() {
   _name = "sprtraindata";
   _initialized = false;

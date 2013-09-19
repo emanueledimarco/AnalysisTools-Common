@@ -14,6 +14,7 @@
 #include <stdio.h>
 
 using namespace std;
+using namespace vecbos;
 
 FiguresOfMeritEvaluator::FiguresOfMeritEvaluator() {
 

@@ -16,7 +16,9 @@
 #include "AnalysisTools/Common/interface/LumiReWeighting.h"
 
 #include <iostream>
-using namespace::std;
+
+using namespace std;
+using namespace vecbos;
 
 LumiReWeighting::LumiReWeighting( std::string generatedFile,
 				  std::string dataFile,

@@ -3,6 +3,7 @@
 #include <iostream>
 
 using namespace bits;
+using namespace vecbos;
 
 std::vector<int> Utils::getTriggers(std::vector<int> requiredTriggers, int firedTrg[4]) {
   std::vector<int> out;

@@ -6,6 +6,8 @@
 #include <TStyle.h>
 #include "AnalysisTools/Common/interface/EfficiencyEvaluator.hh"
 
+using namespace vecbos;
+
 EfficiencyEvaluator::EfficiencyEvaluator(const char* namefile, const char* opt) {
   _file = new TFile(namefile,opt);
   m_namefile = namefile;
@@ -218,3 +220,4 @@ std::vector<TH1F*> EfficiencyEvaluator::GetSingleCutEfficiencies() {
   return output;
 
 }
+

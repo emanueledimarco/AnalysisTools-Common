@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace std;
+using namespace vecbos;
 
 TriggerMask::TriggerMask(TTree *tree)
   : Conditions(tree) {

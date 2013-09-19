@@ -10,6 +10,8 @@
 
 #include "AnalysisTools/Common/interface/Monitor.hh"
 
+using namespace vecbos;
+
 Monitor::Monitor(int *nCand) {
   _nCand=nCand;
 

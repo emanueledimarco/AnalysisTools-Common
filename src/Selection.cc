@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 
+using namespace vecbos;
+
 Selection::Selection(std::string fileCuts, std::string fileSwitches) {
   _fileCut=fileCuts;
   _fileSwitch=fileSwitches;

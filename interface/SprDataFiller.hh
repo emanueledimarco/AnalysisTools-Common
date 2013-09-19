@@ -14,33 +14,36 @@
 #include <vector>
 #include <fstream>
 
-class SprDataFiller {
+namespace vecbos {
 
-private:
+  class SprDataFiller {
 
-  int _nentries;
-  std::vector< std::pair < std::string, float* > > _data;
-  std::string _name; 
-  bool _initialized;
-  std::ofstream _trainFile, _validFile;
+  private:
 
-  void initialize();
-  void fillEvent(int ievent, int signal);
+    int _nentries;
+    std::vector< std::pair < std::string, float* > > _data;
+    std::string _name; 
+    bool _initialized;
+    std::ofstream _trainFile, _validFile;
 
-public:
+    void initialize();
+    void fillEvent(int ievent, int signal);
 
-  SprDataFiller();
-  virtual ~SprDataFiller() {};
+  public:
 
-  //! set the number of entries of the input tree
-  void setEntries(int nentries) { _nentries = nentries; }
-  //! set name of the output
-  void setName(const char *name);
-  //! add a variable
-  void add(std::string varName, float *var);
-  //! signal = 1; background = 0
-  void fill(int ievent, int signal);
+    SprDataFiller();
+    virtual ~SprDataFiller() {};
+
+    //! set the number of entries of the input tree
+    void setEntries(int nentries) { _nentries = nentries; }
+    //! set name of the output
+    void setName(const char *name);
+    //! add a variable
+    void add(std::string varName, float *var);
+    //! signal = 1; background = 0
+    void fill(int ievent, int signal);
   
-};
+  };
 
+}
 #endif

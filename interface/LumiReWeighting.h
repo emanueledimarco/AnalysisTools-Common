@@ -8,20 +8,22 @@
 #include <cmath>
 #include <iostream>
 
-class LumiReWeighting {
- public:
+namespace vecbos {
 
-  LumiReWeighting( std::string generatedFile, std::string dataFile, std::string GenHistName, std::string DataHistName);
-  
-  LumiReWeighting( std::vector< float > MC_distr, std::vector< float > Lumi_distr);
-  
-  void weightOOT_init();
-  
-  double ITweight( int npv );
+  class LumiReWeighting {
+  public:
 
-  double ITweight3BX( float ave_int );
+    LumiReWeighting( std::string generatedFile, std::string dataFile, std::string GenHistName, std::string DataHistName);
+  
+    LumiReWeighting( std::vector< float > MC_distr, std::vector< float > Lumi_distr);
+  
+    void weightOOT_init();
+  
+    double ITweight( int npv );
 
-  double weightOOT( int npv_in_time, int npv_m50nsBX );
+    double ITweight3BX( float ave_int );
+
+    double weightOOT( int npv_in_time, int npv_m50nsBX );
 
   protected:
 
@@ -38,7 +40,7 @@ class LumiReWeighting {
     bool FirstWarning_;
 
 
-};
+  };
 
-
+}
 #endif

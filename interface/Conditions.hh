@@ -15,6 +15,8 @@
 #include <vector>
 #include <string>
 
+namespace vecbos {
+
 class Conditions {
 public :
    TTree          *fChain;   //!pointer to the analyzed TTree or TChain
@@ -41,9 +43,12 @@ public :
    virtual void     Show(Long64_t entry = -1);
 };
 
+}
 #endif
 
 #ifdef Conditions_cxx
+
+using namespace vecbos;
 Conditions::Conditions(TTree *tree)
 {
 // if parameter tree is not specified (or zero), connect the file

@@ -14,32 +14,34 @@
 #include "TTree.h"
 #include <vector>
 
+namespace vecbos {
 
-class TriggerMask : public Conditions {
+  class TriggerMask : public Conditions {
 
-public:
+  public:
 
-  //! constructor
-  TriggerMask(TTree *tree=0);
-  //! destructor
-  virtual ~TriggerMask() {};
+    //! constructor
+    TriggerMask(TTree *tree=0);
+    //! destructor
+    virtual ~TriggerMask() {};
 
-  //! get the vector with the requested triggers
-  std::vector<int> getBits() { return m_requiredTriggers; }
-  //! require a trigger by string
-  void requireTrigger(const char* triggerString);
-  //! reset the list of required triggers
-  void clear() { m_requiredTriggers.clear(); }
+    //! get the vector with the requested triggers
+    std::vector<int> getBits() { return m_requiredTriggers; }
+    //! require a trigger by string
+    void requireTrigger(const char* triggerString);
+    //! reset the list of required triggers
+    void clear() { m_requiredTriggers.clear(); }
   
-private:
+  private:
 
-  //! vector of the requested bits
-  std::vector<int> m_requiredTriggers;
-  //! the tree holding the conditions variables
-  TTree* m_tree;
+    //! vector of the requested bits
+    std::vector<int> m_requiredTriggers;
+    //! the tree holding the conditions variables
+    TTree* m_tree;
 
-};
+  };
 
+}
 #endif
 
 

@@ -3,20 +3,22 @@
 
 #include <vector>
 
-class Skimmer {
+namespace vecbos {
 
-public:
-  Skimmer(const char *skimTxtFile);
-  virtual ~Skimmer();
+  class Skimmer {
 
-  void readFile();
-  bool output(int event);
+  public:
+    Skimmer(const char *skimTxtFile);
+    virtual ~Skimmer();
+
+    void readFile();
+    bool output(int event);
 
 
-private:
-  const char *m_file;
-  std::vector<int> bits;
+  private:
+    const char *m_file;
+    std::vector<int> bits;
 
-};
-
+  };
+}
 #endif
